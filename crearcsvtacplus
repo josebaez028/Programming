@@ -1,3 +1,5 @@
+# Script en Python 3.6 para importar logs de tac plus y prepararlos en un .csv para importar a Mysql.
+
 import csv
 f=open('C:\\tacplus.txt')
 lines = f.readlines()
