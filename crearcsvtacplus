@@ -1,0 +1,26 @@
+import csv
+f=open('C:\\tacplus.txt')
+lines = f.readlines()
+for line in lines:
+      #print(line.split()) lee el log y separa por comas las palabras de toda linea
+      #print(line.split()[-3:-1]) devuelve cmd=configure,terminal,<cr>
+      #print(line.split()[3]) devuelve 23:36:41
+      #print(line.split()[3].split(':')[2]) devuelve 41, de 23:36:41
+      #print(int(line.split()[3].split(':')[2]) * 10) multiplica 41 * 10
+	
+		#print(line.split()[-3:-1])
+
+	#bbb = (line.split()[-3:-1])
+	#a = (line.split())
+	
+	bbb = (line.split()[-3:-1]) # En la variable bbb se pondran los datos del .txt separados por comas.
+    
+	# print (a[0],a[1],a[2],a[3],a[4],a[5],a[-3:-1])
+
+
+with open('C:\\Users\\born\\Desktop\\tac.csv','w') as fp: # con esto creamos un archivo csv en el Escritorio del usuario para luego importarlo a MySQL.
+	 a = csv.writer(fp,delimiter='\t',lineterminator=',') # con esto delimitamos cada palabra por comas dentro de este archivo .csv
+	 a.writerows(bbb) # con esto escribimos los datos en la variable bbb, en el archivo .csv creado anteriormente.
+
+		
+		#print ("a")
